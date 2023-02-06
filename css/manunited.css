@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+*::selection {
+    background-color: red;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #E4D5D5;
+}
+
+.main-content {
+    position: relative;
+    /* height: 600rem; */
+    color: rgb(228, 213, 213);
+}
+
+
+/* Header  */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #97212D;
+    padding: 1.3rem 2.5rem;
+    top: 0;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+}
+
+.control {
+    display: flex;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.option {
+    display: flex;
+    color: #E4D5D5;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+}
+
+.nav-bar .nav-items {
+    padding-left: 2rem;
+}
+
+select {
+    background: none;
+    border: none;
+    color: inherit;
+}
+
+option {
+    color: #97212D;
+}
+
+.sign {
+    margin-left: 1.5em;
+    display: flex;
+}
+
+.sign .sign-items {
+    padding: 0 1rem;
+}
+
+.sign-items+.sign-items {
+    border-left: 1px solid #E4D5D5;
+}
+
+
+/* End Header  */
+
+
+/* Hover  */
+
+.nav-items::after,
+.sign-items::after {
+    content: " ";
+    display: block;
+    height: 3px;
+    background-color: rosybrown;
+    margin-top: 2px;
+    transform: scale(0);
+    transition: all 0.5s;
+}
+
+.nav-items:hover::after,
+.sign-items:hover::after {
+    transform: scale(1);
+}
+
+
+/* End Hover  */
+
+#home {
+    margin-top: 7rem;
+    width: inherit;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+.radio-image {
+    width: 400%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    max-height: 64rem;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.radio-image .first {
+    margin-top: -5rem;
+}
+
+.image-items {
+    width: 25%;
+    transition: 1s;
+}
+
+
+/* Radio Button  */
+
+.btn-set {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 13%;
+    transform: translateX(-50%);
+}
+
+.btn-radio {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2px solid red;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.btn-radio:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.btn-radio+.btn-radio {
+    margin-left: 3rem;
+}
+
+.radio1 {
+    margin-left: 0;
+}
+
+.radio2 {
+    margin-left: -25%;
+}
+
+.radio3 {
+    margin-left: -50%;
+}
+
+.radio4 {
+    margin-left: -75%;
+}
+
+
+/* first-team */
+
+#first-team {
+    width: 66.66%;
+    margin: 0 auto;
+}
+
+.title-fTeam {
+    font-size: 3rem;
+    margin: 6rem 0 6rem -9rem;
+    color: black;
+}
+
+.title-fTeam::after {
+    content: "";
+    display: block;
+    height: 0.3rem;
+    width: 17rem;
+    background-color: red;
+}
+
+.position-names {
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: .1rem solid rgb(216, 216, 216);
+    color: #000;
+    margin-top: 1rem;
+}
+
+.sub-position {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.position-btn {
+    width: 20rem;
+    height: 20rem;
+    background-color: black;
+    border-radius: 10px;
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.position-img {
+    width: 25rem;
+    transition: 1s;
+}
+
+.position-info {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+.position-number {
+    font-size: 1rem;
+}
+
+.position-number::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 1.5rem;
+    background-color: red;
+}
+
+.position-name {
+    font-size: 1.7rem;
+    width: 50%;
+}
+
+.position-btn:hover .position-img {
+    transform: scale(1.1);
+}
+
+#manager {
+    width: inherit;
+    color: #fff;
+    margin-top: 5rem;
+}
+
+.manager-content {
+    background-color: #3F3F3F;
+    width: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem 14rem 0;
+}
+
+.manager-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 33.33%;
+}
+
+.title-manager {
+    font-size: 3rem;
+}
+
+.title-manager::after {
+    content: "";
+    display: block;
+    height: 0.3rem;
+    width: 15rem;
+    background-color: red;
+}
+
+.name-manager {
+    font-size: 2.6rem;
+}
+
+.manager-image {
+    width: 33.33%;
+}
+
+.manager-image img {
+    width: 100%;
+}
+
+.message-manager {
+    width: 50%;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.manager-game {
+    width: 30%;
+    font-size: 2rem;
+}
+
+.match {
+    margin-top: 5rem;
+}
+
+.number {
+    display: block;
+}
+
+.manager-info {
+    color: #000;
+    width: 60%;
+    margin: 5rem auto;
+}
+
+.manager-story {
+    border-bottom: 1px solid black;
+}
+
+.story-title {
+    color: gray;
+    font-size: 1.6rem;
+    margin: 1.6rem 0;
+}
+
+.story-text {
+    font-size: 1.5rem;
+    color: black;
+    margin: 1rem 0 2rem;
+    text-transform: none;
+}
+
+.manager-detail {
+    color: black;
+    display: flex;
+    text-transform: capitalize;
+}
+
+.detail-item {
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* flex: 1; */
+}
+
+.detail-item-title {
+    font-size: 1.4rem;
+    color: gray;
+    margin-top: 1.2rem;
+}
+
+.detail-item-posiotion {
+    font-size: 1.4rem;
+    margin: 1.6rem 0;
+}
+
+.detail-item-date {
+    font-weight: bold;
+    color: #97212D;
+    font-size: 1.8rem;
+    margin: 1.6rem 0;
+}
+
+small {
+    color: blue;
+}
+
+#legend {
+    background-color: #3F3F3F;
+    margin: 0;
+    padding: 3rem 0;
+}
+
+.mr-legends {
+    font-size: 3rem;
+    color: #fff;
+    margin-left: 13rem;
+}
+
+.mr-legends::after {
+    content: "";
+    display: block;
+    background-color: red;
+    height: 0.3rem;
+    width: 12rem;
+}
+
+.legends-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem 2rem;
+    justify-content: space-evenly;
+}
+
+.legends-item-btn {
+    width: 20rem;
+    height: 20rem;
+    background-color: black;
+    border-radius: 10px;
+    margin: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.legends-img {
+    width: 25rem;
+    transition: 1s;
+}
+
+.legends-item-btn:hover .legends-img {
+    transform: scale(1.1);
+}
+
+.name-btn {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    color: rgb(228, 213, 213);
+    width: 50%;
+    font-size: 1.8rem;
+    z-index: 1;
+}
+
+.name-btn::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 50%;
+    background-color: red;
+}
+
+.legends-item-btn::after {
+    content: " ";
+    display: block;
+    width: 200px;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    bottom: 0;
+}
+
+#footer {
+    position: relative;
+}
+
+.sponsor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0 2rem;
+}
+
+.sponsor-items img {
+    width: 10rem;
+    margin-left: 2rem;
+    opacity: 0.5;
+}
+
+.contact {
+    display: flex;
+    position: absolute;
+    top: 20%;
+    right: 7%;
+}
+
+.contact-items {
+    font-size: 2.6rem;
+    color: black;
+    font-weight: bold;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    border: 3px solid black;
+    position: relative;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.contact-items i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact-items:hover {
+    background-color: #000;
+    color: white;
+    transition: .5s;
+}
+
+.reyc {
+    font-size: 1.5rem;
+    text-transform: none;
+    color: black;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    opacity: 0.5;
+    font-style: italic;
+    letter-spacing: 1.5px;
+}
+
+.reyc .contact-name,
+.phone {
+    text-align: center;
+}
+
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+    width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right bottom, #3F3F3F, red);
+    border-radius: 10rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 10rem;
+}
